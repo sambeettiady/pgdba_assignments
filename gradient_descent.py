@@ -1,1 +1,0 @@
-def gradient_descent():
