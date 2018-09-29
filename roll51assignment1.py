@@ -260,8 +260,8 @@ output_generic_newton = NewtonFindRoot(function_name=function,derivative_name=de
 #Problem 5
 #Secant Method
 def SecantFindRoot(function_name = function,initial_guess_1 = 0,initial_guess_2 = 1,max_iterations = 10,tolerance = 10**(-10)):
-    x0 = initial_guess_1
-    x1 = initial_guess_2
+    x0 = float(initial_guess_1)
+    x1 = float(initial_guess_2)
     approx_root_list = []
     relative_error_list = []
     if function_name(x0)*function_name(x1) > 0:
@@ -283,3 +283,4 @@ def SecantFindRoot(function_name = function,initial_guess_1 = 0,initial_guess_2 
     return [approx_root_list,relative_error_list]
     
 output_secant = SecantFindRoot(function_name=function,initial_guess_1=-3,initial_guess_2=1)
+
